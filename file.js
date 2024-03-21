@@ -1,10 +1,5 @@
 const fs = require("fs")
 
-fs.readdir('./', (err, files) => {
-    if (err){
-        throw err
-    }
-    else{
-        console.log(files)
-    }
-})
+let ipsum = fs.readFileSync('./README.md', "UTF-8")
+
+console.log(ipsum)
