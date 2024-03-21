@@ -9,6 +9,10 @@ const waitInterval = 500
 let current = 0
 const inTime = ()=>{
     current += waitInterval
-    console.log(`waiting ${current / 1000} seconds`)
+    const p = Math.floor((current / waitTime) * 100)
+    process.stdout.clearLine()
+    process.stdout.cursorTo(0)
+    process.stdout.write(`waiting... ${p}`)
+    // console.log(`waiting ${current / 1000} seconds`)
 }
 const interval = setInterval(inTime, waitInterval)
